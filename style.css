@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #23251b;
+  color: #acc8d7;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 200px;
+  gap: 5px;
+  width: 100%;
+}
+
+.keyboard button {
+  all: unset;
+  background: #acc8d7;
+  color: #23251b;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  grid-column: span 2;
+}
+
+#row-3 {
+  grid-column: 4 / span 2;
+}
+
+.success {
+  background-color: hsl(120, 56%, 40%) !important;
+}
+
+.failure {
+  background-color: hsl(0, 45%, 40%) !important;
+}
+
+.word span {
+  display: inline-block;
+  width: 20px;
+  border-bottom: 2px solid #acc8d7;
+  text-align: center;
+  margin-inline: 1rem;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.game-over,
+.game-win {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over {
+  background-color: hsla(0, 31%, 20%, 0.4);
+}
+
+.game-win {
+  background-color: hsla(124, 31%, 20%, 0.4);
+}
+
+.game-over h2 {
+  color: hsl(0, 45%, 40%);
+  font-size: 5rem;
+}
+
+.game-win h2 {
+  color: hsl(120, 56%, 40%);
+  font-size: 5rem;
+}
+
+.game-over p,
+.game-win p {
+  font-size: 3rem;
+  margin-block: 5px;
+}
+
+.game-over button,
+.game-win button {
+  all: unset;
+  background: #acc8d7;
+  color: #23251b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 1rem;
+}
